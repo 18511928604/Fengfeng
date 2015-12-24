@@ -32,15 +32,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)registerBtnClikced:(id)sender {
     
@@ -51,11 +42,12 @@
 
 - (IBAction)loginBtnClicked:(id)sender {
     
-    NSString * jidString = self.accountTF.text;
+    NSString * userNameString = self.accountTF.text;
     NSString * pwString = self.passwordTF.text;
     
-    [[FFXMPPManager sharedXmppManager] connectToHost:@"lxdemacbook-pro.local" withMyJid:jidString success:^(id response) {
+    [[FFXMPPManager sharedXmppManager] connectToHost:kXMPPHost withUser:userNameString  success:^(id response) {
         
+        [[FFXMPPManager sharedXmppManager] goOnline];
         
         NSLog(@"链接成功");
     } failure:^(NSError *error) {

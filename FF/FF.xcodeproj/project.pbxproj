@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2CA74288DC5CCEF336BD8578 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36E251367731997CE5AFC1A /* libPods.a */; };
-		E95EB26E1C1448FC00FE7B99 /* UserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95EB26D1C1448FC00FE7B99 /* UserListViewController.m */; };
-		E95EB2711C14490F00FE7B99 /* ConversationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95EB2701C14490F00FE7B99 /* ConversationsViewController.m */; };
+		E952E8651C2BAAC700E88718 /* PublicRoomListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E952E8641C2BAAC700E88718 /* PublicRoomListViewController.m */; };
+		E952E86D1C2BADCF00E88718 /* PrivateRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E952E86C1C2BADCF00E88718 /* PrivateRoomViewController.m */; };
 		E9C9828C1C1144CC00E9E46D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C9828B1C1144CC00E9E46D /* main.m */; };
 		E9C9828F1C1144CC00E9E46D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C9828E1C1144CC00E9E46D /* AppDelegate.m */; };
-		E9C982921C1144CC00E9E46D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C982911C1144CC00E9E46D /* ViewController.m */; };
 		E9C982951C1144CC00E9E46D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9C982931C1144CC00E9E46D /* Main.storyboard */; };
 		E9C982971C1144CC00E9E46D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C982961C1144CC00E9E46D /* Assets.xcassets */; };
 		E9C9829A1C1144CC00E9E46D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9C982981C1144CC00E9E46D /* LaunchScreen.storyboard */; };
@@ -25,16 +24,15 @@
 		693BB0C28DF9F1FE36165AC5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B8549D4578FDC6E10D91D262 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D36E251367731997CE5AFC1A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E95EB26C1C1448FC00FE7B99 /* UserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListViewController.h; sourceTree = "<group>"; };
-		E95EB26D1C1448FC00FE7B99 /* UserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListViewController.m; sourceTree = "<group>"; };
-		E95EB26F1C14490F00FE7B99 /* ConversationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationsViewController.h; sourceTree = "<group>"; };
-		E95EB2701C14490F00FE7B99 /* ConversationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationsViewController.m; sourceTree = "<group>"; };
+		E952E8631C2BAAC700E88718 /* PublicRoomListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicRoomListViewController.h; sourceTree = "<group>"; };
+		E952E8641C2BAAC700E88718 /* PublicRoomListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicRoomListViewController.m; sourceTree = "<group>"; };
+		E952E86A1C2BAC3C00E88718 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E952E86B1C2BADCF00E88718 /* PrivateRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateRoomViewController.h; sourceTree = "<group>"; };
+		E952E86C1C2BADCF00E88718 /* PrivateRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateRoomViewController.m; sourceTree = "<group>"; };
 		E9C982871C1144CC00E9E46D /* FF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C9828B1C1144CC00E9E46D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9C9828D1C1144CC00E9E46D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E9C9828E1C1144CC00E9E46D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E9C982901C1144CC00E9E46D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E9C982911C1144CC00E9E46D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E9C982941C1144CC00E9E46D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9C982961C1144CC00E9E46D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9C982991C1144CC00E9E46D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +74,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E952E8621C2BAA5C00E88718 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E9C982AA1C12DFC500E9E46D /* FFTabBarController.h */,
+				E9C982AB1C12DFC500E9E46D /* FFTabBarController.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		E952E8661C2BAAD600E88718 /* RoomList */ = {
+			isa = PBXGroup;
+			children = (
+				E952E8631C2BAAC700E88718 /* PublicRoomListViewController.h */,
+				E952E8641C2BAAC700E88718 /* PublicRoomListViewController.m */,
+				E952E86B1C2BADCF00E88718 /* PrivateRoomViewController.h */,
+				E952E86C1C2BADCF00E88718 /* PrivateRoomViewController.m */,
+			);
+			name = RoomList;
+			sourceTree = "<group>";
+		};
+		E952E8671C2BAAF600E88718 /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+				E9C982A71C127F7800E9E46D /* LoginViewController.h */,
+				E9C982A81C127F7800E9E46D /* LoginViewController.m */,
+			);
+			name = "Login&Register";
+			sourceTree = "<group>";
+		};
 		E9C9827E1C1144CC00E9E46D = {
 			isa = PBXGroup;
 			children = (
@@ -97,22 +124,9 @@
 		E9C982891C1144CC00E9E46D /* FF */ = {
 			isa = PBXGroup;
 			children = (
-				E9C9828D1C1144CC00E9E46D /* AppDelegate.h */,
-				E9C9828E1C1144CC00E9E46D /* AppDelegate.m */,
-				E9C982AA1C12DFC500E9E46D /* FFTabBarController.h */,
-				E9C982AB1C12DFC500E9E46D /* FFTabBarController.m */,
-				E95EB26C1C1448FC00FE7B99 /* UserListViewController.h */,
-				E95EB26D1C1448FC00FE7B99 /* UserListViewController.m */,
-				E95EB26F1C14490F00FE7B99 /* ConversationsViewController.h */,
-				E95EB2701C14490F00FE7B99 /* ConversationsViewController.m */,
-				E9C982901C1144CC00E9E46D /* ViewController.h */,
-				E9C982911C1144CC00E9E46D /* ViewController.m */,
-				E9C982A71C127F7800E9E46D /* LoginViewController.h */,
-				E9C982A81C127F7800E9E46D /* LoginViewController.m */,
-				E9C982931C1144CC00E9E46D /* Main.storyboard */,
-				E9C982961C1144CC00E9E46D /* Assets.xcassets */,
-				E9C982981C1144CC00E9E46D /* LaunchScreen.storyboard */,
-				E9C9829B1C1144CC00E9E46D /* Info.plist */,
+				E952E8661C2BAAD600E88718 /* RoomList */,
+				E952E8621C2BAA5C00E88718 /* Common */,
+				E952E8671C2BAAF600E88718 /* Login&Register */,
 				E9C9828A1C1144CC00E9E46D /* Supporting Files */,
 				E9C982A41C1169A800E9E46D /* FFXMPPManager.h */,
 				E9C982A51C1169A800E9E46D /* FFXMPPManager.m */,
@@ -123,7 +137,14 @@
 		E9C9828A1C1144CC00E9E46D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E9C9828D1C1144CC00E9E46D /* AppDelegate.h */,
+				E9C9828E1C1144CC00E9E46D /* AppDelegate.m */,
+				E9C982931C1144CC00E9E46D /* Main.storyboard */,
+				E9C982961C1144CC00E9E46D /* Assets.xcassets */,
+				E9C982981C1144CC00E9E46D /* LaunchScreen.storyboard */,
+				E9C9829B1C1144CC00E9E46D /* Info.plist */,
 				E9C9828B1C1144CC00E9E46D /* main.m */,
+				E952E86A1C2BAC3C00E88718 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -249,14 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9C982921C1144CC00E9E46D /* ViewController.m in Sources */,
 				E9C9828F1C1144CC00E9E46D /* AppDelegate.m in Sources */,
 				E9C982A61C1169A800E9E46D /* FFXMPPManager.m in Sources */,
+				E952E86D1C2BADCF00E88718 /* PrivateRoomViewController.m in Sources */,
+				E952E8651C2BAAC700E88718 /* PublicRoomListViewController.m in Sources */,
 				E9C9828C1C1144CC00E9E46D /* main.m in Sources */,
 				E9C982A91C127F7800E9E46D /* LoginViewController.m in Sources */,
-				E95EB2711C14490F00FE7B99 /* ConversationsViewController.m in Sources */,
 				E9C982AC1C12DFC500E9E46D /* FFTabBarController.m in Sources */,
-				E95EB26E1C1448FC00FE7B99 /* UserListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +387,8 @@
 			baseConfigurationReference = B8549D4578FDC6E10D91D262 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FF/PrefixHeader.pch";
 				INFOPLIST_FILE = FF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.longerxin.FF;
@@ -379,6 +401,8 @@
 			baseConfigurationReference = 693BB0C28DF9F1FE36165AC5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FF/PrefixHeader.pch";
 				INFOPLIST_FILE = FF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.longerxin.FF;

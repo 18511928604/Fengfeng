@@ -28,7 +28,7 @@
 {
     if (self = [super init]) {
         self.xmppStream = [[XMPPStream alloc] init];
-        [self.xmppStream addDelegate:self delegateQueue:nil];
+        [self.xmppStream addDelegate:self delegateQueue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)];
     }
 
     return self;
@@ -37,14 +37,19 @@
 
 #pragma mark - connect -
 
-- (void)connectToHost:(NSString *)hostName withMyJid:(NSString *)myJidString success:(void(^)(id response))successCallBack failure:(void (^)(NSError * error))failureCallBack
+- (void)connectToHost:(NSString *)hostName withUser:(NSString *)userName success:(void(^)(id response))successCallBack failure:(void (^)(NSError * error))failureCallBack
 {
-    XMPPJID * jid = [XMPPJID jidWithString:myJidString];
+    hostName = @"lxdeMacBook-Pro.local";
+    userName = @"longxin223";
+    
+    self.connectSuccessCallBack = successCallBack;
+    self.connectFailureCallBack = failureCallBack;
+    XMPPJID * jid = [XMPPJID jidWithUser:userName domain:hostName resource:kJidResource];
     [self.xmppStream setMyJID:jid];
     [self.xmppStream setHostName:hostName];
     [self.xmppStream setHostPort:5222];
     NSError * error;
-    [self.xmppStream connectWithTimeout:0 error:&error];
+    [self.xmppStream connectWithTimeout:10 error:&error];
 }
 
 
@@ -67,13 +72,62 @@
     }
 }
 
+#pragma mark - login -
+- (void)loginWithUserName:(NSString *)userName passWord:(NSString *)passWord success:(void (^)(id))successCallBack failure:(void (^)(NSError *))failureCallBack
+{
+    
+    self.loginSuccessCallBack = successCallBack;
+    self.loginFailureCallBack = failureCallBack;
+    
+    void (^connectBlock)(void) = ^(){
+        NSError * error;
+        [self.xmppStream authenticateWithPassword:passWord error:&error];
+        if (error) {
+            NSLog(@"登录出错：%@",error);
+        }
+    };
+    
+    
+    if (self.xmppStream.isConnected) {
+        connectBlock();
+    }
+    else
+    {
+        [self connectToHost:kXMPPHost withUser:userName success:^(id response) {
+            NSError * error;
+            [self.xmppStream authenticateWithPassword:passWord error:&error];
+            if (error) {
+                NSLog(@"登录出错：%@",error);
+            }
+        } failure:^(NSError *error) {
+            NSLog(@"链接出错");
+        }];
+    }
+}
 
 
+- (void)xmppStreamDidAuthenticate:(XMPPStream *)sender
+{
+    if (self.loginSuccessCallBack) {
+        self.loginSuccessCallBack(self);
+    }
+}
 
+- (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(DDXMLElement *)error
+{
+    if (self.loginFailureCallBack) {
+        NSError * error_1 = [NSError errorWithDomain:error.stringValue code:0 userInfo:nil];
+        self.loginFailureCallBack(self,error_1);
+    }
+    
+}
 
+- (void)goOnline
+{
+    XMPPPresence *presence = [XMPPPresence presence];
 
-
-
+    [_xmppStream sendElement:presence];
+}
 
 
 

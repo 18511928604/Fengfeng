@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <DDLog.h>
+#import <DDTTYLogger.h>
 
 @interface AppDelegate ()
 
@@ -16,6 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
 
     
     
