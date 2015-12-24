@@ -17,7 +17,6 @@
 
 
 + (FFXMPPManager *)sharedXmppManager;
-@property (nonatomic,assign)BOOL isConnected;
 
 
 
@@ -37,7 +36,7 @@
  */
 @property (nonatomic,copy) void(^loginSuccessCallBack)(id response);
 @property (nonatomic,copy) void(^loginFailureCallBack)(id response, NSError *error);
-- (void)loginWithUserName:(NSString *)userName passWord:(NSString *)passWord success:(void(^)(id response))successCallBack failure:(void (^)(NSError * error))failureCallBack;
+- (void)loginWithUserName:(NSString *)userName passWord:(NSString *)passWord success:(void(^)(id response))successCallBack failure:(void (^)(id response,NSError * error))failureCallBack;
 
 
 //上线

@@ -4,4 +4,4 @@
 # use_frameworks!
 
 pod 'XMPPFramework', '~> 3.6.6'
-
+pod 'MBProgressHUD', '~> 0.9.1'

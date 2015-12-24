@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B25DDDF6951564374D0C63561D313A28</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C88533E88830AC2B529E08FA6CAB3338</key>
+		<key>3ADBED7ABD887280205CDA4E60E6291B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>ECFE0958DDB7FEC79B3AA1C9337BC941</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F932AABEDD58A02399043835A54DB60A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -45,14 +45,33 @@
     NSString * userNameString = self.accountTF.text;
     NSString * pwString = self.passwordTF.text;
     
-    [[FFXMPPManager sharedXmppManager] connectToHost:kXMPPHost withUser:userNameString  success:^(id response) {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    
+    [[FFXMPPManager sharedXmppManager] loginWithUserName:userNameString passWord:pwString success:^(id response) {
         
         [[FFXMPPManager sharedXmppManager] goOnline];
         
-        NSLog(@"链接成功");
-    } failure:^(NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            
+            [self dismissViewControllerAnimated:YES completion:nil];
+        });
         
+        NSLog(@"链接成功");
+
+    } failure:^(id response, NSError *error) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            
+        });
+
         NSLog(@"链接失败%@",error);
+
     }];
+    
 }
 @end

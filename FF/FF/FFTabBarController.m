@@ -23,7 +23,7 @@
 
     LoginViewController * loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
     
-    if (![FFXMPPManager sharedXmppManager].isConnected) {
+    if (![FFXMPPManager sharedXmppManager].xmppStream.isConnected) {
         [self presentViewController:loginVC animated:YES completion:^{
             
         }];

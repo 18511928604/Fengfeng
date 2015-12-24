@@ -73,7 +73,7 @@
 }
 
 #pragma mark - login -
-- (void)loginWithUserName:(NSString *)userName passWord:(NSString *)passWord success:(void (^)(id))successCallBack failure:(void (^)(NSError *))failureCallBack
+- (void)loginWithUserName:(NSString *)userName passWord:(NSString *)passWord success:(void (^)(id))successCallBack failure:(void (^)(id response,NSError *))failureCallBack
 {
     
     self.loginSuccessCallBack = successCallBack;
