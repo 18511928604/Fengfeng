@@ -20,7 +20,7 @@
 
 
 
-
+#pragma mark - 连接
 /**
  *  连接
  */
@@ -29,7 +29,7 @@
 
 - (void)connectToHost:(NSString *)hostName withUser:(NSString *)userName success:(void(^)(id response))successCallBack failure:(void (^)(NSError * error))failureCallBack;
 
-
+#pragma mark - 登录
 /**
  *  登录
  *  注： 如果未连接到服务器，先连接
@@ -38,15 +38,18 @@
 @property (nonatomic,copy) void(^loginFailureCallBack)(id response, NSError *error);
 - (void)loginWithUserName:(NSString *)userName passWord:(NSString *)passWord success:(void(^)(id response))successCallBack failure:(void (^)(id response,NSError * error))failureCallBack;
 
-
+#pragma mark - 上线
 //上线
 - (void)goOnline;
 
 
-@end
+#pragma mark - 搜索房间
+@property (nonatomic,copy)void (^searchRoomCallBack)(NSMutableArray * roomsArray);
+- (void)searchRoomWithCallBack:(void (^)(NSMutableArray * roomsArray))callBack;
 
 
-@interface FFXMPPManager (connection)
+#pragma mark - 进入房间
+
 
 
 

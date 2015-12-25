@@ -10,10 +10,14 @@
 #define PrefixHeader_pch
 
 #import <MBProgressHUD.h>
+#import <Masonry.h>
 
 #define kXMPPHost @"lxdemacbook-pro.local"
 
 #define kJidResource @"IOS"
+
+#define kGround @"Conference"
+
 
 
 #endif /* PrefixHeader_pch */

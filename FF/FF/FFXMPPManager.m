@@ -129,6 +129,109 @@
     [_xmppStream sendElement:presence];
 }
 
+#pragma mark - room
+
+/**
+ *  request for get roomlist
+ */
+- (void)searchRoomWithCallBack:(void (^)(NSMutableArray * roomsArray))callBack
+{
+    self.searchRoomCallBack = callBack;
+    
+    /*
+     <iq type="get" to="conference.1000phone.net" id="disco2"><query xmlns="http://jabber.org/protocol/disco#items"></query></iq>
+     */
+    
+    NSXMLElement * query = [NSXMLElement elementWithName:@"query" xmlns:@"http://jabber.org/protocol/disco#items"];
+    XMPPJID * proxyCandidateJid = [XMPPJID jidWithString:[NSString stringWithFormat:@"%@.%@",kGround,kXMPPHost]];
+    
+    XMPPIQ * iq = [XMPPIQ iqWithType:@"get" to:proxyCandidateJid elementID:@"disco2" child:query];
+    [self.xmppStream sendElement:iq];
+}
+
+/**
+ *  response for get roomlist
+ */
+- (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq
+{
+    /*
+     <iq xmlns="jabber:client" type="result" id="disco2" from="conference.admin-88ixf99az" to="admin@admin-88ixf99az/IOS">
+     <query xmlns="http://jabber.org/protocol/disco#items">
+     <item jid="room2@conference.admin-88ixf99az" name="&#x7279;"></item>
+     <item jid="room3@conference.admin-88ixf99az" name="room3"></item>
+     <item jid="room4@conference.admin-88ixf99az" name="room4"></item>
+     </query>
+     </iq>
+     */
+
+    DDXMLNode* idXML = [iq attributeForName:@"id"];
+    
+    NSString * idString = [idXML stringValue];
+
+    if ([idString isEqualToString:@"disco2"]) {
+        NSArray * array = [iq elementsForName:@"query"];
+        
+        NSXMLElement * query = [array firstObject];
+        
+        DDXMLNode *nameSpace = [[query namespaces] firstObject];
+        
+        if ([[nameSpace stringValue] isEqualToString:@"http://jabber.org/protocol/disco#info"]) {
+            
+            DDXMLNode * type = [iq attributeForName:@"type"];
+            if ([[type stringValue] isEqualToString:@"error"]) {
+                self.searchRoomCallBack(nil);
+                return YES;
+            }
+            
+            NSArray*field=  [[[query elementsForName:@"x"]firstObject]elementsForName:@"field"];
+            NSString*str=[[[[field objectAtIndex:1]elementsForName:@"value"]firstObject]stringValue];
+            if (str.length==0) {
+                str=@"没有描述";
+            }
+            //主题
+            NSString*str1=[[[[field objectAtIndex:2]elementsForName:@"value"]firstObject]stringValue];
+            if (str1.length==0) {
+                str1=@"没有主题";
+            }
+            //人数限制
+            NSString*str2=[[[[field objectAtIndex:3]elementsForName:@"value"]firstObject]stringValue];
+            if (str2.length==0) {
+                str2=@"0";
+            }
+            //创建日期
+            NSString*str3=[[[[field objectAtIndex:4]elementsForName:@"value"]firstObject]stringValue];
+            //@"subject":str1,
+            DDXMLNode*idXML1=  [iq attributeForName:@"from"];
+            //转换为字符串
+            NSString*str4=  [idXML1 stringValue];
+            
+            NSDictionary*dic=@{@"des":str,@"num":str2,@"time":str3,@"from":str4};
+            
+//            self.searchRoomCallBack(dic);
+            return YES;
+        }
+        
+        array = [query elementsForName:@"item"];
+        
+        NSMutableArray*roomArray=[NSMutableArray arrayWithCapacity:0];
+        for (NSXMLElement*item in array) {
+            NSMutableDictionary*room=[NSMutableDictionary dictionaryWithCapacity:0];
+            
+            DDXMLNode*jid=   [item attributeForName:@"jid"];
+            DDXMLNode*name= [item attributeForName:@"name"];
+            [room setValue:[jid stringValue] forKey:@"roomJid"];
+            [room setValue:[name stringValue] forKey:@"roomName"];
+            
+            [roomArray addObject:room];
+        }
+        if (self.searchRoomCallBack) {
+            self.searchRoomCallBack(roomArray);
+        }
+    }
+
+    return YES;
+}
+
 
 
 

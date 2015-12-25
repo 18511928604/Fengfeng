@@ -7,6 +7,7 @@
 //
 
 #import "PublicRoomListViewController.h"
+#import "FFXMPPManager.h"
 
 @interface PublicRoomListViewController ()
 
@@ -16,12 +17,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    UIBarButtonItem * createRoomBtn = [[UIBarButtonItem alloc] initWithTitle:@"建房" style:UIBarButtonItemStylePlain target:self action:@selector(createRoomClicked:)];
+    self.navigationItem.rightBarButtonItem = createRoomBtn;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [[FFXMPPManager sharedXmppManager] searchRoomWithCallBack:^(NSMutableArray *roomsArray) {
+        NSLog(@"%@",roomsArray);
+    }];
+}
+
+- (void)createRoomClicked:(UIBarButtonItem *)item
+{
+
 }
 
 

@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--公共-->
+        <!--Public Room List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PublicRoomListViewController" sceneMemberID="viewController">
@@ -19,14 +19,14 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="公共" id="ch3-I1-u7r"/>
+                    <navigationItem key="navigationItem" id="Uvb-rx-0oJ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="787" y="190"/>
+            <point key="canvasLocation" x="1319" y="190"/>
         </scene>
-        <!--私有-->
+        <!--Private Room View Controller-->
         <scene sceneID="Dgp-wN-OH9">
             <objects>
                 <viewController id="TbJ-dl-jjz" customClass="PrivateRoomViewController" sceneMemberID="viewController">
@@ -40,12 +40,12 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="私有" id="MKl-fa-x31"/>
+                    <navigationItem key="navigationItem" id="9i6-hp-DWm"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7L-L9-Ylu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="787" y="797"/>
+            <point key="canvasLocation" x="1319" y="797"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="kwq-Fy-CXD">
@@ -63,7 +63,7 @@
                                 <rect key="frame" x="112" y="90" width="164" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="账号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECb-aZ-Mjk">
                                 <rect key="frame" x="46" y="41" width="34" height="21"/>
@@ -127,13 +127,53 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="8Yg-6G-vMp"/>
-                        <segue destination="TbJ-dl-jjz" kind="relationship" relationship="viewControllers" id="jpo-Qa-lYR"/>
+                        <segue destination="B35-wp-kNw" kind="relationship" relationship="viewControllers" id="8Yg-6G-vMp"/>
+                        <segue destination="eOy-lg-MVZ" kind="relationship" relationship="viewControllers" id="jpo-Qa-lYR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Gg-4R-dGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="347" y="416"/>
+        </scene>
+        <!--公共-->
+        <scene sceneID="fva-Z3-wy6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B35-wp-kNw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="公共" id="ch3-I1-u7r"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kAj-Fn-ZrZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wrs-Jo-s9K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aAr-Os-qmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="190"/>
+        </scene>
+        <!--私有-->
+        <scene sceneID="EMS-hT-tz2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eOy-lg-MVZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="私有" id="MKl-fa-x31"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jev-nn-N21">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TbJ-dl-jjz" kind="relationship" relationship="rootViewController" id="Sbn-eR-gfh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUh-0Z-WwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="797"/>
         </scene>
     </scenes>
 </document>
