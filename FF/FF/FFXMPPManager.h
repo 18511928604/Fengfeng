@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <XMPPFramework.h>
 
 
-@interface FFXMPPManager : NSObject
+@interface FFXMPPManager : NSObject <XMPPRoomDelegate>
 
 
 @property (nonatomic,strong)XMPPStream * xmppStream;
@@ -44,14 +43,22 @@
 
 
 #pragma mark - 搜索房间
+/**
+ *  获取全部房间列表
+ */
 @property (nonatomic,copy)void (^searchRoomCallBack)(NSMutableArray * roomsArray);
 - (void)searchRoomWithCallBack:(void (^)(NSMutableArray * roomsArray))callBack;
 
 
-#pragma mark - 进入房间
 
+#pragma mark - 进入（创建）房间
+@property (nonatomic,copy)void (^roomMessageCallBack)(NSDictionary * dict);
+@property (nonatomic,copy)void (^roomPresentCallBack)(NSDictionary * dict);
 
+@property (nonatomic,strong)NSMutableDictionary * presentDict;
+@property (nonatomic,copy)NSString * nowRoomJid;
 
+-(XMPPRoom*)xmppRoomCreateRoomName:(NSString *)roomName nickName:(NSString *)nickName MessageCallBack:(void(^)(NSDictionary*message))mcb presentCallBack:(void(^)(NSDictionary* present))pcb;
 
 @end
 

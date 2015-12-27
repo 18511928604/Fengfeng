@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2CA74288DC5CCEF336BD8578 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36E251367731997CE5AFC1A /* libPods.a */; };
+		E918E9F71C2ED2D500EFC2B2 /* FFDrawingBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = E918E9F61C2ED2D500EFC2B2 /* FFDrawingBoardView.m */; };
+		E918E9FB1C2ED45A00EFC2B2 /* FFDrawingBoardPath.m in Sources */ = {isa = PBXBuildFile; fileRef = E918E9FA1C2ED45A00EFC2B2 /* FFDrawingBoardPath.m */; };
+		E918E9FE1C2F804800EFC2B2 /* FFPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E918E9FD1C2F804800EFC2B2 /* FFPlayingViewController.m */; };
 		E952E8651C2BAAC700E88718 /* PublicRoomListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E952E8641C2BAAC700E88718 /* PublicRoomListViewController.m */; };
 		E952E86D1C2BADCF00E88718 /* PrivateRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E952E86C1C2BADCF00E88718 /* PrivateRoomViewController.m */; };
+		E952E8721C2D5B5E00E88718 /* RoomListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E952E8701C2D5B5E00E88718 /* RoomListTableViewCell.m */; };
+		E952E8731C2D5B5E00E88718 /* RoomListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E952E8711C2D5B5E00E88718 /* RoomListTableViewCell.xib */; };
 		E9C9828C1C1144CC00E9E46D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C9828B1C1144CC00E9E46D /* main.m */; };
 		E9C9828F1C1144CC00E9E46D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C9828E1C1144CC00E9E46D /* AppDelegate.m */; };
 		E9C982951C1144CC00E9E46D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9C982931C1144CC00E9E46D /* Main.storyboard */; };
@@ -24,11 +29,20 @@
 		693BB0C28DF9F1FE36165AC5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B8549D4578FDC6E10D91D262 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D36E251367731997CE5AFC1A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E918E9F51C2ED2D500EFC2B2 /* FFDrawingBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDrawingBoardView.h; sourceTree = "<group>"; };
+		E918E9F61C2ED2D500EFC2B2 /* FFDrawingBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDrawingBoardView.m; sourceTree = "<group>"; };
+		E918E9F91C2ED45A00EFC2B2 /* FFDrawingBoardPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDrawingBoardPath.h; sourceTree = "<group>"; };
+		E918E9FA1C2ED45A00EFC2B2 /* FFDrawingBoardPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDrawingBoardPath.m; sourceTree = "<group>"; };
+		E918E9FC1C2F804800EFC2B2 /* FFPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPlayingViewController.h; sourceTree = "<group>"; };
+		E918E9FD1C2F804800EFC2B2 /* FFPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPlayingViewController.m; sourceTree = "<group>"; };
 		E952E8631C2BAAC700E88718 /* PublicRoomListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicRoomListViewController.h; sourceTree = "<group>"; };
 		E952E8641C2BAAC700E88718 /* PublicRoomListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicRoomListViewController.m; sourceTree = "<group>"; };
 		E952E86A1C2BAC3C00E88718 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E952E86B1C2BADCF00E88718 /* PrivateRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateRoomViewController.h; sourceTree = "<group>"; };
 		E952E86C1C2BADCF00E88718 /* PrivateRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateRoomViewController.m; sourceTree = "<group>"; };
+		E952E86F1C2D5B5E00E88718 /* RoomListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomListTableViewCell.h; sourceTree = "<group>"; };
+		E952E8701C2D5B5E00E88718 /* RoomListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomListTableViewCell.m; sourceTree = "<group>"; };
+		E952E8711C2D5B5E00E88718 /* RoomListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomListTableViewCell.xib; sourceTree = "<group>"; };
 		E9C982871C1144CC00E9E46D /* FF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C9828B1C1144CC00E9E46D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9C9828D1C1144CC00E9E46D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,6 +88,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E918E9F81C2ED2DC00EFC2B2 /* DrawingBoard */ = {
+			isa = PBXGroup;
+			children = (
+				E918EA011C2F806F00EFC2B2 /* Views */,
+				E918EA001C2F805F00EFC2B2 /* Models */,
+				E918E9FF1C2F805100EFC2B2 /* ViewControllers */,
+			);
+			name = DrawingBoard;
+			sourceTree = "<group>";
+		};
+		E918E9FF1C2F805100EFC2B2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E918E9FC1C2F804800EFC2B2 /* FFPlayingViewController.h */,
+				E918E9FD1C2F804800EFC2B2 /* FFPlayingViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E918EA001C2F805F00EFC2B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E918E9F91C2ED45A00EFC2B2 /* FFDrawingBoardPath.h */,
+				E918E9FA1C2ED45A00EFC2B2 /* FFDrawingBoardPath.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E918EA011C2F806F00EFC2B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E918E9F51C2ED2D500EFC2B2 /* FFDrawingBoardView.h */,
+				E918E9F61C2ED2D500EFC2B2 /* FFDrawingBoardView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		E952E8621C2BAA5C00E88718 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,10 +137,8 @@
 		E952E8661C2BAAD600E88718 /* RoomList */ = {
 			isa = PBXGroup;
 			children = (
-				E952E8631C2BAAC700E88718 /* PublicRoomListViewController.h */,
-				E952E8641C2BAAC700E88718 /* PublicRoomListViewController.m */,
-				E952E86B1C2BADCF00E88718 /* PrivateRoomViewController.h */,
-				E952E86C1C2BADCF00E88718 /* PrivateRoomViewController.m */,
+				E952E86E1C2D5B4400E88718 /* ViewControllers */,
+				E952E8741C2D5B6400E88718 /* Views */,
 			);
 			name = RoomList;
 			sourceTree = "<group>";
@@ -101,6 +150,27 @@
 				E9C982A81C127F7800E9E46D /* LoginViewController.m */,
 			);
 			name = "Login&Register";
+			sourceTree = "<group>";
+		};
+		E952E86E1C2D5B4400E88718 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E952E8631C2BAAC700E88718 /* PublicRoomListViewController.h */,
+				E952E8641C2BAAC700E88718 /* PublicRoomListViewController.m */,
+				E952E86B1C2BADCF00E88718 /* PrivateRoomViewController.h */,
+				E952E86C1C2BADCF00E88718 /* PrivateRoomViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E952E8741C2D5B6400E88718 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E952E86F1C2D5B5E00E88718 /* RoomListTableViewCell.h */,
+				E952E8701C2D5B5E00E88718 /* RoomListTableViewCell.m */,
+				E952E8711C2D5B5E00E88718 /* RoomListTableViewCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		E9C9827E1C1144CC00E9E46D = {
@@ -124,6 +194,7 @@
 		E9C982891C1144CC00E9E46D /* FF */ = {
 			isa = PBXGroup;
 			children = (
+				E918E9F81C2ED2DC00EFC2B2 /* DrawingBoard */,
 				E952E8661C2BAAD600E88718 /* RoomList */,
 				E952E8621C2BAA5C00E88718 /* Common */,
 				E952E8671C2BAAF600E88718 /* Login&Register */,
@@ -211,6 +282,7 @@
 			files = (
 				E9C9829A1C1144CC00E9E46D /* LaunchScreen.storyboard in Resources */,
 				E9C982971C1144CC00E9E46D /* Assets.xcassets in Resources */,
+				E952E8731C2D5B5E00E88718 /* RoomListTableViewCell.xib in Resources */,
 				E9C982951C1144CC00E9E46D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,11 +344,15 @@
 			files = (
 				E9C9828F1C1144CC00E9E46D /* AppDelegate.m in Sources */,
 				E9C982A61C1169A800E9E46D /* FFXMPPManager.m in Sources */,
+				E918E9FB1C2ED45A00EFC2B2 /* FFDrawingBoardPath.m in Sources */,
 				E952E86D1C2BADCF00E88718 /* PrivateRoomViewController.m in Sources */,
+				E918E9FE1C2F804800EFC2B2 /* FFPlayingViewController.m in Sources */,
 				E952E8651C2BAAC700E88718 /* PublicRoomListViewController.m in Sources */,
 				E9C9828C1C1144CC00E9E46D /* main.m in Sources */,
 				E9C982A91C127F7800E9E46D /* LoginViewController.m in Sources */,
+				E952E8721C2D5B5E00E88718 /* RoomListTableViewCell.m in Sources */,
 				E9C982AC1C12DFC500E9E46D /* FFTabBarController.m in Sources */,
+				E918E9F71C2ED2D500EFC2B2 /* FFDrawingBoardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

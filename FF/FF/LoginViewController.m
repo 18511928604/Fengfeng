@@ -24,7 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.accountTF.text = @"longxin123";
+    self.passwordTF.text = @"1";
 }
 
 - (void)didReceiveMemoryWarning {

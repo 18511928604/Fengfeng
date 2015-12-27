@@ -9,8 +9,12 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#import <XMPPFramework.h>
 #import <MBProgressHUD.h>
 #import <Masonry.h>
+#import <XMPPRoom.h>
+#import <XMPPRoomCoreDataStorage.h>
+
 
 #define kXMPPHost @"lxdemacbook-pro.local"
 

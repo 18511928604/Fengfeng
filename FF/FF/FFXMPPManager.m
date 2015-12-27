@@ -129,8 +129,9 @@
     [_xmppStream sendElement:presence];
 }
 
-#pragma mark - room
+#pragma mark - room -
 
+#pragma mark - room list
 /**
  *  request for get roomlist
  */
@@ -232,6 +233,43 @@
     return YES;
 }
 
+#pragma mark - create room
+-(XMPPRoom*)xmppRoomCreateRoomName:(NSString *)roomName nickName:(NSString *)nickName MessageCallBack:(void(^)(NSDictionary* message))mcb presentCallBack:(void(^)(NSDictionary* present))pcb{
+    //记录block指针，以及相应的房间jid，为消息接口准备
+    self.roomMessageCallBack = mcb;
+    self.roomPresentCallBack = pcb;
+    //对出席列表字典初始化
+    self.presentDict=[NSMutableDictionary dictionaryWithCapacity:0];
+    NSString*str=[[roomName componentsSeparatedByString:@"@"]firstObject];
+    self.nowRoomJid=str;
+    //@"room2@conference.127.0.0.1"
+    //指定的房间号 如果没有就创建
+    XMPPRoom* room = [[XMPPRoom alloc] initWithRoomStorage:[XMPPRoomCoreDataStorage sharedInstance] jid:[XMPPJID jidWithString:[NSString stringWithFormat:@"%@@%@.%@",roomName,kGround,kXMPPHost]] dispatchQueue:dispatch_get_main_queue()];
+    //激活
+    [room addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    [room activate:self.xmppStream];
+//    [userDefaults removeObjectForKey:GROUNDROOMCONFIG];
+    //使用的昵称 进入房间的函数
+    [room joinRoomUsingNickname:nickName history:nil];
+    [room configureRoomUsingOptions:nil];
+    return room;    
+}
+
+#pragma mark - room delegate
+- (void)xmppRoomDidDestroy:(XMPPRoom *)sender
+{
+    NSLog(@"已经销毁房间");
+}
+
+- (void)xmppRoomDidCreate:(XMPPRoom *)sender
+{
+    NSLog(@"已经创建房间");
+}
+
+- (void)xmppRoom:(XMPPRoom *)sender didReceiveMessage:(XMPPMessage *)message fromOccupant:(XMPPJID *)occupantJID
+{
+    
+}
 
 
 
