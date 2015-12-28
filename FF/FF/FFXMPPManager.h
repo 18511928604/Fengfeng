@@ -37,6 +37,11 @@
 @property (nonatomic,copy) void(^loginFailureCallBack)(id response, NSError *error);
 - (void)loginWithUserName:(NSString *)userName passWord:(NSString *)passWord success:(void(^)(id response))successCallBack failure:(void (^)(id response,NSError * error))failureCallBack;
 
+#pragma mark - 注册
+@property (nonatomic,copy) void(^registerSuccessCallBack)(id resonse);
+@property (nonatomic,copy) void(^registerFailuerCallBack)(id response,NSError * error);
+- (void)registerWithUserName:(NSString *)userName passWord:(NSString *)password success:(void(^)(id response))successCallBack failuer:(void (^)(id reponse,NSError * error))failuerCallBack;
+
 #pragma mark - 上线
 //上线
 - (void)goOnline;

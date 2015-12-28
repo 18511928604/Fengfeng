@@ -11,6 +11,7 @@
 		E918E9F71C2ED2D500EFC2B2 /* FFDrawingBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = E918E9F61C2ED2D500EFC2B2 /* FFDrawingBoardView.m */; };
 		E918E9FB1C2ED45A00EFC2B2 /* FFDrawingBoardPath.m in Sources */ = {isa = PBXBuildFile; fileRef = E918E9FA1C2ED45A00EFC2B2 /* FFDrawingBoardPath.m */; };
 		E918E9FE1C2F804800EFC2B2 /* FFPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E918E9FD1C2F804800EFC2B2 /* FFPlayingViewController.m */; };
+		E918EA041C30301F00EFC2B2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E918EA031C30301F00EFC2B2 /* RegisterViewController.m */; };
 		E952E8651C2BAAC700E88718 /* PublicRoomListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E952E8641C2BAAC700E88718 /* PublicRoomListViewController.m */; };
 		E952E86D1C2BADCF00E88718 /* PrivateRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E952E86C1C2BADCF00E88718 /* PrivateRoomViewController.m */; };
 		E952E8721C2D5B5E00E88718 /* RoomListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E952E8701C2D5B5E00E88718 /* RoomListTableViewCell.m */; };
@@ -35,6 +36,8 @@
 		E918E9FA1C2ED45A00EFC2B2 /* FFDrawingBoardPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDrawingBoardPath.m; sourceTree = "<group>"; };
 		E918E9FC1C2F804800EFC2B2 /* FFPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPlayingViewController.h; sourceTree = "<group>"; };
 		E918E9FD1C2F804800EFC2B2 /* FFPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPlayingViewController.m; sourceTree = "<group>"; };
+		E918EA021C30301F00EFC2B2 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		E918EA031C30301F00EFC2B2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		E952E8631C2BAAC700E88718 /* PublicRoomListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicRoomListViewController.h; sourceTree = "<group>"; };
 		E952E8641C2BAAC700E88718 /* PublicRoomListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicRoomListViewController.m; sourceTree = "<group>"; };
 		E952E86A1C2BAC3C00E88718 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 			children = (
 				E9C982A71C127F7800E9E46D /* LoginViewController.h */,
 				E9C982A81C127F7800E9E46D /* LoginViewController.m */,
+				E918EA021C30301F00EFC2B2 /* RegisterViewController.h */,
+				E918EA031C30301F00EFC2B2 /* RegisterViewController.m */,
 			);
 			name = "Login&Register";
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 				TargetAttributes = {
 					E9C982861C1144CC00E9E46D = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 2UBW4KAD46;
 					};
 				};
 			};
@@ -349,6 +355,7 @@
 				E918E9FE1C2F804800EFC2B2 /* FFPlayingViewController.m in Sources */,
 				E952E8651C2BAAC700E88718 /* PublicRoomListViewController.m in Sources */,
 				E9C9828C1C1144CC00E9E46D /* main.m in Sources */,
+				E918EA041C30301F00EFC2B2 /* RegisterViewController.m in Sources */,
 				E9C982A91C127F7800E9E46D /* LoginViewController.m in Sources */,
 				E952E8721C2D5B5E00E88718 /* RoomListTableViewCell.m in Sources */,
 				E9C982AC1C12DFC500E9E46D /* FFTabBarController.m in Sources */,
@@ -463,6 +470,7 @@
 			baseConfigurationReference = B8549D4578FDC6E10D91D262 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FF/PrefixHeader.pch";
 				INFOPLIST_FILE = FF/Info.plist;
@@ -477,6 +485,7 @@
 			baseConfigurationReference = 693BB0C28DF9F1FE36165AC5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FF/PrefixHeader.pch";
 				INFOPLIST_FILE = FF/Info.plist;

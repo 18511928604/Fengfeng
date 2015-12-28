@@ -79,7 +79,7 @@
     self.loginSuccessCallBack = successCallBack;
     self.loginFailureCallBack = failureCallBack;
     
-    void (^connectBlock)(void) = ^(){
+    void (^authenticateBlock)(void) = ^(){
         NSError * error;
         [self.xmppStream authenticateWithPassword:passWord error:&error];
         if (error) {
@@ -89,18 +89,20 @@
     
     
     if (self.xmppStream.isConnected) {
-        connectBlock();
+        
+        authenticateBlock();
+        
     }
     else
     {
         [self connectToHost:kXMPPHost withUser:userName success:^(id response) {
-            NSError * error;
-            [self.xmppStream authenticateWithPassword:passWord error:&error];
-            if (error) {
-                NSLog(@"登录出错：%@",error);
-            }
+            
+            authenticateBlock();
+            
         } failure:^(NSError *error) {
+            
             NSLog(@"链接出错");
+        
         }];
     }
 }
@@ -119,7 +121,6 @@
         NSError * error_1 = [NSError errorWithDomain:error.stringValue code:0 userInfo:nil];
         self.loginFailureCallBack(self,error_1);
     }
-    
 }
 
 - (void)goOnline
@@ -127,6 +128,33 @@
     XMPPPresence *presence = [XMPPPresence presence];
 
     [_xmppStream sendElement:presence];
+}
+
+#pragma mark - register
+- (void)registerWithUserName:(NSString *)userName passWord:(NSString *)password success:(void(^)(id response))successCallBack failuer:(void (^)(id reponse,NSError * error))failuerCallBack
+{
+    self.registerSuccessCallBack = successCallBack;
+    self.registerFailuerCallBack = failuerCallBack;
+    
+    void (^registerBlock)(void) = ^(){
+        
+        NSError * error;
+        
+        [self.xmppStream registerWithPassword:password error:&error];
+        
+        if (error) {
+            NSLog(@"注册失败");
+            if (self.registerFailuerCallBack) {
+                self.registerFailuerCallBack(nil,error);
+            }
+        }
+    };
+    
+    if (self.xmppStream.isConnected) {
+        <#statements#>
+    }
+    
+
 }
 
 #pragma mark - room -
@@ -252,6 +280,7 @@
     //使用的昵称 进入房间的函数
     [room joinRoomUsingNickname:nickName history:nil];
     [room configureRoomUsingOptions:nil];
+
     return room;    
 }
 

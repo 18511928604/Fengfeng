@@ -16,6 +16,9 @@
 #import <XMPPRoomCoreDataStorage.h>
 
 
+#import "FFXMPPManager.h"
+
+
 #define kXMPPHost @"lxdemacbook-pro.local"
 
 #define kJidResource @"IOS"

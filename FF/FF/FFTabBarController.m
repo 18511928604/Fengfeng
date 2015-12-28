@@ -21,7 +21,7 @@
 {
     [super viewDidAppear:animated];
 
-    LoginViewController * loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+    LoginViewController * loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginNav"];
     
     if (![FFXMPPManager sharedXmppManager].xmppStream.isConnected) {
         [self presentViewController:loginVC animated:YES completion:^{
